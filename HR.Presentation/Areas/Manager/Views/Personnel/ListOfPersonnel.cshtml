@@ -1,0 +1,90 @@
+﻿@model ListOfPersonVM
+
+<!-- For demo purpose -->
+<div class="container py-5">
+    <div class="row text-center text-white">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">Team Members</h1>
+           
+        </div>
+    </div>
+</div><!-- End -->
+
+
+<div class="container">
+    <div class="row text-center">
+        @foreach (var personnel in Model.Personnels)
+        {
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4" style="height:22rem;">
+                    <img src="@personnel.ImagePath" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">@personnel.Name @personnel.SecondName @personnel.Surname @personnel.SecondSurname </h5><span class="small text-uppercase text-muted">@personnel.Sector.GetDisplayName() - @personnel.Department.GetDisplayName()</span>
+                    <br> <span class="small text-uppercase text-muted">@personnel.PhoneNumber.ToString("+90 (###) ###-####") </span> 
+                    <div class="d-flex align-items-center justify-content-center" >
+                    <i class="material-icons opacity-10">assignment_ind</i>
+                        @if (personnel.IsActive)
+                        {
+                            <span>Active</span>
+                        }  
+                        else
+                        {
+                            <span>Passive</span>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- End -->
+        }
+        
+
+    </div>
+
+
+
+
+
+    <div class="demo d-flex justify-content-center align-items-center">
+        <nav class="pagination-outer" aria-label="Page navigation">
+            <ul class="pagination">
+                @if (Model.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a href="@Url.Action("ListOfPersonnel", new { page = Model.CurrentPage - 1, pageSize = Model.PageSize })" class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">«</span>
+                        </a>
+                    </li>
+                }
+
+                @for (int i = 1; i <= Model.TotalCount; i++)
+                {
+                    @if (i == Model.CurrentPage)
+                    {
+                        <li class="page-item active"><span class="page-link">@i</span></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class="page-link" href="@Url.Action("ListOfPersonnel", new { page = i, pageSize = Model.PageSize })">@i</a></li>
+                    }
+                }
+
+                @if (Model.CurrentPage < Model.TotalCount)
+                {
+                    <li class="page-item">
+                        <a href="@Url.Action("ListOfPersonnel", new { page = Model.CurrentPage + 1, pageSize = Model.PageSize })" class="page-link" aria-label="Next">
+                            <span aria-hidden="true">»</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+</div>

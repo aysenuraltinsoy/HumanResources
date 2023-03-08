@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "ErrorMessage";
+    TempData["Title"] = "Succesfull";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeSender</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/styleforlogin/css/site.css" rel="stylesheet" />
+    <link href="~/assets/login/fonts/font-awesome.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   
+
+    <script src="~/styleforlogin/js/site.js"></script>
+    <style>
+        body {
+            background-image:url("../img/background.jpg");
+           
+            background-size: cover;
+            
+        }
+
+        span {
+            font-size: 14px;
+        }
+       
+            /* EFFECT 1 ========================================== */
+
+
+
+    </style>
+
+</head>
+
+
+<div class="container mt-5" style="height:80vh;">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <form id="regForm" method="post" style="opacity:90%;  background-color:lightgray;">
+                <h1 id="register">Reset Password</h1>
+                <div class="all-steps" id="all-steps">
+                    <span class="step"><i class="fa fa-envelope"></i></span>
+                    
+                </div>
+
+                <div class="tab">
+                    <h6>What's your Email?</h6>
+                    <p>
+                        <input placeholder="email..."  type="email" id="typeEmail" class="form-control my-3" name="email" />
+                       
+                    </p>
+                    <div>
+                   <div>
+                            @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                            {
+                                <div class="alert alert-danger">@ViewData["ErrorMessage"]</div>
+                            }
+                            @if (!string.IsNullOrEmpty(TempData["Succesfull"] as string))
+                            {
+                                <div class="alert alert-success">@TempData["Succesfull"]</div>
+                            }
+                     
+                   </div>
+                </div>
+
+                </div>
+                
+                <div class="thanks-message text-center" id="text-message">
+                    <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
+                    <h3>Thankyou for your attention!</h3> <span>Thanks for your valuable information. We'll send you an email with code to reset your password.</span>
+                </div>
+                <div style="overflow:auto;" id="nextprevious">
+                    <div style="float:right;">
+                        <input type="submit" class="btn btn-dark w-100" value="Reset password">
+
+                        <a  asp-action="Login" asp-controller="Login">Login</a>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

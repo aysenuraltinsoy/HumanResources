@@ -1,0 +1,180 @@
+﻿@model List<UserAdvanceListVM>
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4 shadow-lg">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Personnel Indivudual Requests</h6>
+                    </div>
+                </div>
+
+                <!-- Personel individual Requests-->
+
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Request Date</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approval Status</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reply Date</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Where(x => x.AdvanceType == HR.Domain.Enum.AdvanceType.IndividualDemand))
+                                {
+                                    <tr>
+
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Amount</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center badge badge-sm bg-gradient-success">@item.Currency</span>
+                                        </td>
+                                        <td class="align-middle text-center text-wrap" style="max-width:200px;">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Description</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.RequestDate.ToString("dd/MM/yyyy")</span>
+                                        </td>
+                                       
+                                         <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                        @item.ApprovalStatus.GetDisplayName()
+                                            </span>
+                                        </td>
+                                        @if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.AwaitingApproval)
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-center text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <a onclick="return ConfirmDelete()"  asp-controller="Personnel" asp-action="CancelAdvance" asp-route-id="@item.Id" class="btn btn-danger">
+                                                    Cancel
+                                                </a>
+                                            </td>
+                                        }
+                                        else if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.Cancelled)
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-center text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-center text-secondary text-xs font-weight-bold">@item.ReplyDate?.ToString("dd/MM/yyyy")</span>
+                                            </td>
+                                        }
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--End Of Personel individual Requests-->
+
+
+            </div>
+            <div class="card my-4 mt-5 shadow-lg">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Personnel Coperate Requests</h6>
+                    </div>
+                </div>
+
+                <!-- Personel Corporate Requests-->
+
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Request Date</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approval Status</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reply Date</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model.Where(x => x.AdvanceType == HR.Domain.Enum.AdvanceType.CorporateDemand))
+                                {
+
+                                    <tr>
+
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Amount</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success">@item.Currency</span>
+                                        </td>
+                                        <td class="align-middle text-center text-wrap" style="max-width:200px;">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.Description</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.RequestDate.ToString("dd/MM/yyyy")</span>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                        
+                                            @item.ApprovalStatus.GetDisplayName()
+                                            </span>
+                                        </td>
+                                        @if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.AwaitingApproval)
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+
+                                            <td class="align-middle">
+
+                                                <a onclick="return ConfirmDelete()" asp-controller="Personnel" asp-action="CancelAdvance" asp-route-id="@item.Id" class="btn btn-danger">
+                                                    Cancel
+                                                </a>
+                                            </td>
+                                        }
+                                        else if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.Cancelled)
+                                        {
+                                              <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+
+                                        }
+                                        else
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">@item.ReplyDate?.ToString("dd/MM/yyyy")</span>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--End of Personel Corporate Requests-->
+            </div>
+        </div>
+    </div>
+
+    <partial name="~/Areas/Personnel/Views/Partial/Footer.cshtml" />
+</div>
+
+
+<script>function ConfirmDelete() { if (confirm("Silme işlemini gerçekleştirmek istediğinizden emin misiniz?")) {  return true; } else { return false; } } </script>

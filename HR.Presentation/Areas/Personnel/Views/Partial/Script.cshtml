@@ -1,0 +1,183 @@
+﻿@*<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>*@
+
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+            damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+</script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+@*<script src="../assets/js/material-dashboard.min.js?v=3.0.4" type="text/javascript"></script>*@
+
+<!--Toaster kütüphanesinin javaScript kodları-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<!--Jquery kütüphane-->
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+
+        <script src="~/js/UploadImage.js"></script>
+
+<script src="~/assets/js/material-dashboard.js"></script>
+<!--Upload photo using ajax-->
+<script>
+    $(document).ready(function () {
+        $("#UploadPath").change(function () {
+            if (this.files && this.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#defaultImage').attr('src', e.target.result);
+                    $('#defaultImage1').attr('src', e.target.result);
+                    //$('#defaultImage').width(200);
+                    //$('#defaultImage').height(200);
+                };
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+
+<!--Those two scripts are for UserAdvance Page-->
+@*@if (TempData["Response"] != null)
+{
+    <script>
+        var message = '@TempData["Response"]';
+        if(@TempData["ResponseState"])
+        {
+            var notification = $('<div class="alert alert-success" role="alert"  style="width:50%; height:auto;  margin:3px auto; display:table; padding: 10px; text-align: center; opacity: 0.8; color:white;">' + message + '</div>');
+        }
+        else
+        {
+            var notification = $('<div class="alert alert-danger" role="alert"  style="width:50%; height:auto;  margin:3px auto; display:table; padding: 10px; text-align: center; opacity: 0.8; color:white;">' + message + '</div>');
+        }
+
+
+        $("body").append(notification);
+        setTimeout(function () {
+            notification.fadeOut(1000, function () {
+                $(this).remove();
+            });
+        }, 10000);
+    </script>
+}
+*@
+@if (TempData["Response"] != null)
+{
+    <script>
+        var message = '@TempData["Response"]';
+        var responseState = '@((bool)TempData["ResponseState"] ? "True" : "False")'; // Bu satırı ekleyin
+
+        if (responseState === "True") // Değiştirin
+        {
+            var notification = $('<div class="alert alert-success" role="alert"  style="width:50%; height:auto;  margin:3px auto; display:table; padding: 10px; text-align: center; opacity: 0.8; color:white;">' + message + '</div>');
+        
+        }
+        else // Değiştirin
+        {
+            var notification = $('<div class="alert alert-danger" role="alert"  style="width:50%; height:auto;  margin:3px auto; display:table; padding: 10px; text-align: center; opacity: 0.8; color:white;">' + message + '</div>');
+        }
+
+        $("body").append(notification);
+        setTimeout(function () {
+            notification.fadeOut(1000, function () {
+                $(this).remove();
+            });
+        }, 10000);
+
+      
+
+    </script>
+}
+
+
+
+
+<script>
+    var selectBox = document.getElementById("selectBox");
+    selectBox.addEventListener("change", function () {
+        var selectedValue = this.value;
+        var hiddenDiv = document.getElementById("hiddenDiv");
+        if (selectedValue === "1") {
+            hiddenDiv.style.display = "block";
+        } else {
+            hiddenDiv.style.display = "none";
+        }
+    });
+    // sayfa yenilendiğinde seçili seçeneğe göre gizli bölümü göster/gizle
+    var selectedValue = selectBox.value;
+    if (selectedValue === "1") {
+        hiddenDiv.style.display = "block";
+    } else {
+        hiddenDiv.style.display = "none";
+    }
+</script>
+
+
+<!--Left Panelinde linke tıklandığında arka planına renk verdirten JavaScript kodu-->
+
+<script>
+
+    function changeColor(element) {
+        var allLinks = document.querySelectorAll(".nav-link.text-white");
+        console.log(allLinks);
+        for (var i = 0; i < allLinks.length; i++) {
+            allLinks[i].style.backgroundColor = "";
+        }
+        element.style.backgroundColor = "darkturquoise";
+        sessionStorage.setItem("selectedLink", element.innerHTML);
+    }
+
+    window.onload = function () {
+        var selectedLink = sessionStorage.getItem("selectedLink");
+        if (selectedLink) {
+            var allLinks = document.querySelectorAll(".nav-link.text-white");
+            for (var i = 0; i < allLinks.length; i++) {
+                if (allLinks[i].innerHTML === selectedLink) {
+                    allLinks[i].style.backgroundColor = "darkturquoise";
+                    break;
+                }
+            }
+        }
+    };
+
+    function resetColor() {
+        var allLinks = document.querySelectorAll(".nav-link.text-white");
+        for (var i = 0; i < allLinks.length; i++) {
+            allLinks[i].style.backgroundColor = "";
+        }
+        sessionStorage.removeItem("selectedLink");
+    }
+</script>
+
+
+
+@*Telefon formatı input için geçerli*@
+
+<script>
+    function formatPhoneNumber(phoneNumberInput) {
+
+        var phoneNumber = phoneNumberInput.value.replace(/\D/g, '');
+        if (phoneNumber.length > 10) {
+            phoneNumber = phoneNumber.slice(0, 10); // Take only the first 10 digits
+        }
+        var formattedPhoneNumber = formatUSPhoneNumber(phoneNumber);
+        phoneNumberInput.value = formattedPhoneNumber;
+        document.querySelector(".phoneInputHidden").value = phoneNumber;
+        console.log(document.querySelector(".phoneInputHidden").value)
+    }
+
+    function formatUSPhoneNumber(phoneNumber) {
+        var formattedPhoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '($1) $2-$3-$4');
+        return formattedPhoneNumber;
+    }
+</script>

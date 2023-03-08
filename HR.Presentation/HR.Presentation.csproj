@@ -1,0 +1,190 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\animated.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\core.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\icons.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\larger.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\list.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\mixins.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\path.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\stacked.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\less\variables.less" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Remove="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Personnel\Data\" />
+    <Folder Include="Areas\Personnel\Models\" />
+    <Folder Include="Areas\Personnel\Views\Home\" />
+    <Folder Include="wwwroot\img\Logo\" />
+    <Folder Include="wwwroot\img\userspic\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\Login\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\assets\Login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\assets\Login\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <None Include="wwwroot\assets\Login\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="wwwroot\assets\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <None Include="wwwroot\assets\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="wwwroot\assets\Login\js\main.js" />
+    <None Include="wwwroot\assets\Login\vendor\animsition\js\animsition.js" />
+    <None Include="wwwroot\assets\Login\vendor\animsition\js\animsition.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\js\popper.js" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\assets\Login\vendor\countdowntime\countdowntime.js" />
+    <None Include="wwwroot\assets\Login\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\assets\Login\vendor\daterangepicker\moment.js" />
+    <None Include="wwwroot\assets\Login\vendor\daterangepicker\moment.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\animsition.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\countdowntime.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\daterangepicker.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\main.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\moment.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\moment.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\popper.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\popper.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\js\select2.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\assets\Login\vendor\select2\select2.js" />
+    <None Include="wwwroot\assets\Login\vendor\select2\select2.min.js" />
+    <None Include="wwwroot\scss\style.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\styleForLogin\font-awesome-4.7.0\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentAssertions" Version="6.9.0" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HR.Application\HR.Application.csproj" />
+    <ProjectReference Include="..\HR.Domain\HR.Domain.csproj" />
+    <ProjectReference Include="..\HR.Infrastructure\HR.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

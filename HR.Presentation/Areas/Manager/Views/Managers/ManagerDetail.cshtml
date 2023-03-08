@@ -1,0 +1,161 @@
+﻿@model UserDetailsVM
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_ManagerLayout.cshtml";
+}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3 text-center">Profile Detail</h6>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+
+                        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+                        <div class="container">
+                            <div class="row flex-lg-nowrap">
+
+
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col mb-3">
+                                            <div class="card d-flex justify-content-center" style="color:aliceblue;">
+                                                <div class="card-body">
+                                                    <div class="e-profile">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-auto mb-3">
+                                                                <div class="mx-auto" style="width: 140px;">
+                                                                    <div>
+                                                                        <img class="d-flex justify-content-center align-items-center rounded " src="@Model.ImagePath" style="height: 140px; width: 140px;" />
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                                                <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                                                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Name @Model.SecondName @Model.Surname @Model.SecondSurname</h4>
+
+                                                                    <h1 class="badge rounded-pill text-bg-dark">@Model.Sector.GetDisplayName()</h1>
+
+                                                                    <p class="mb-0" style="color:#7b809a;"><strong>@Model.Department.GetDisplayName()</strong></p>
+
+                                                                    <div class="mt-2">
+                                                                        <button class="btn btn-primary" type="button">
+                                                                            <span>
+                                                                                @if (Model.EndingDate > DateTime.Now || Model.EndingDate == null)
+                                                                                {
+                                                                                    <text> Active</text>
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    <text> Pasive </text>
+                                                                                }
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <ul class="nav nav-tabs">
+                                                            <li> <h3>Detail Information</h3></li>
+                                                        </ul>
+                                                        <div class="tab-content pt-3">
+                                                            <div class="tab-pane active">
+                                                                <div novalidate="">
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Full Name : </strong> </label>
+                                                                                        <label value=""> @Model.Name @Model.SecondName @Model.Surname @Model.SecondSurname</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Identity Number : </strong></label>
+                                                                                        <label value="identityNumber"> @Model.IdentityNumber</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Email : </strong></label>
+                                                                                        <label value="email">@Model.Email</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Birth Date : </strong></label>
+                                                                                        <label value="birthDate"> @Model.BirthDate.ToString("dd/MM/yyyy")</label>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Phone : </strong></label>
+                                                                                        <label value="">@String.Format("+90 {0:(###) ###-####}", @Model.PhoneNumber)</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Place of Birth : </strong></label>
+                                                                                        <label value="birthPlace"> @Model.PlaceOfBirth</label>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row">
+
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Starting Date : </strong></label>
+                                                                                        <label> @Model.StartingDate.ToString("dd/MM/yyyy")</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Ending Date : </strong></label>
+                                                                                        <label> @Model.EndingDate?.ToString("dd/MM/yyyy")</label>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <div class="form-group">
+                                                                                        <label><strong>Adress : </strong></label>
+                                                                                        <label value=""> @Model.Address</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <partial name="~/Areas/Manager/Views/Partial/Footer.cshtml" />
+</div>

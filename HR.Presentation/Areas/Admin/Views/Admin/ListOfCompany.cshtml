@@ -1,0 +1,78 @@
+﻿@model ListOfCompanyVM
+
+@{
+	ViewData["Title"] = "AddCompany";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid py-4">
+
+	<div class="row d-flex justify-content-center align-items-center">
+		<div class="col-12">
+			<div class="card my-4 shadow-lg">
+				<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+					<div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+						<h6 class="text-white text-capitalize ps-3 text-center ">List Of Companies</h6>
+					</div>
+				</div>
+				<div class="row d-flex justify-content-center align-items-center" style="float: left;">
+					@foreach (var item in Model.Companies)
+					{
+						<div class="card " style="width: 18rem; height: 37rem; margin:10px; ">
+							<img src="@item.Logo" style="height: 250px; margin-top:10px; " class="card-img-top" alt="...">
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5 class="card-title">@item.CompanyName.ToUpper()</h5>
+								<p class="card-text">Company Title: @item.CompanyTitle <br /> Phone: @String.Format("+90 {0:(###) ###-####}", double.Parse(item.CompanyPhone)) <br /> Email: @item.EmailAddress</p>
+								<div class="text-center">
+								<a asp-area="Admin" asp-controller="Admin" asp-action="CompanyDetailProfile" asp-route-id="@item.AppCompanyID" class="btn btn-primary">Company Details</a>
+								<a asp-area="Admin" asp-controller="Admin" asp-action="UpdateInfoCompany" asp-route-id="@item.AppCompanyID" class="btn btn-primary">Update Company</a>
+								</div>
+							</div>
+						</div>
+
+					}
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="demo d-flex justify-content-center align-items-center">
+		<nav class="pagination-outer" aria-label="Page navigation">
+			<ul class="pagination">
+				@if (Model.CurrentPage > 1)
+				{
+					<li class="page-item">
+						<a href="@Url.Action("ListOfCompany", new { page = Model.CurrentPage - 1, pageSize = Model.PageSize })" class="page-link" aria-label="Previous">
+							<span aria-hidden="true">«</span>
+						</a>
+					</li>
+				}
+
+				@for (int i = 1; i <= Model.TotalCount; i++)
+				{
+					@if (i == Model.CurrentPage)
+					{
+						<li class="page-item active"><span class="page-link">@i</span></li>
+					}
+					else
+					{
+						<li class="page-item"><a class="page-link" href="@Url.Action("ListOfCompany", new { page = i, pageSize = Model.PageSize })">@i</a></li>
+					}
+				}
+
+				@if (Model.CurrentPage < Model.TotalCount)
+				{
+					<li class="page-item">
+						<a href="@Url.Action("ListOfCompany", new { page = Model.CurrentPage + 1, pageSize = Model.PageSize })" class="page-link" aria-label="Next">
+							<span aria-hidden="true">»</span>
+						</a>
+					</li>
+				}
+			</ul>
+		</nav>
+	</div>
+
+	<partial name="~/Areas/Admin/Views/Partial/Footer.cshtml" />
+
+</div>
+
+

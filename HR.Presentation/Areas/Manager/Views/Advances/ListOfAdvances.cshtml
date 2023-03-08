@@ -1,0 +1,293 @@
+﻿@model List<AdvanceListVM>
+
+<div class="container-fluid py-4 " id="acHazel" >
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4 shadow-lg">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Personnel Indivudual Advance Request List</h6>
+                    </div>
+                </div>
+
+                <!-- Personel individual Requests-->
+
+                <div class="card-body px-0 pb-2">
+                    <div class="table-scrollable-container" style="height: 300px; overflow-y: auto;">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Personnel Name</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency</th>
+                                   
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Request Date</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approval Status</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reply Date</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Where(x => x.AdvanceType == HR.Domain.Enum.AdvanceType.IndividualDemand))
+                                {
+                                    <tr>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.AppUser.Name @item.AppUser.Surname</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Amount</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Currency</span>
+                                        </td>
+                                        
+                                        
+                                        <td class="align-middle text-center text-wrap" style="max-width:200px;">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Description</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.RequestDate.ToString("dd/MM/yyyy")</span>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                                @item.ApprovalStatus.GetDisplayName()
+                                            </span>
+                                        </td>
+                                        @if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.AwaitingApproval)
+                                        {
+                                             <td>
+                                             </td> 
+                                                
+                                                
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-outline-success" onclick="init(event)" data-id="@item.ID">
+                                                 
+                                                        Select
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        }
+                                        else if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.Cancelled)
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-center text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-center text-secondary text-xs font-weight-bold">@item.ReplyDate?.ToString("dd/MM/yyyy")</span>
+                                            </td>
+                                        }
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+                <!--End Of Personel individual Requests-->
+
+
+            </div>
+            
+            <div class="card my-4 mt-5 shadow-lg">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Personnel Coperate Advance Request List</h6>
+                    </div>
+                </div>
+
+                
+
+                <!-- Personel Corporate Requests-->
+
+                <div class="card-body px-0 pb-2">
+                    <div class="table-scrollable-container" style="height: 300px; overflow-y: auto;">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0" id="advance-table-container-coperate">
+                            <thead>
+                                <tr>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Personnel Name</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
+
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency</th>
+                                   
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Request Date</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approval Status</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reply Date</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model.Where(x => x.AdvanceType == HR.Domain.Enum.AdvanceType.CorporateDemand))
+                                {
+
+                                    <tr>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.AppUser.Name @item.AppUser.Surname</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Amount</span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Currency</span>
+                                        </td>
+                                       
+                                        <td class="align-middle text-center text-wrap" style="max-width:200px;">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.Description</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.RequestDate.ToString("dd/MM/yyyy")  </span>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+
+                                                @item.ApprovalStatus.GetDisplayName()
+                                            </span>
+                                        </td>
+                                        @if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.AwaitingApproval)
+                                        {
+                                             <td>
+                                             </td> 
+                                                
+                                                
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-outline-success" onclick="init(event)" data-id="@item.ID">
+                                                 
+                                                        Select
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            
+                                                    
+                                                 
+                                        }
+                                        else if (item.ApprovalStatus == HR.Domain.Enum.ApprovalStatus.Cancelled)
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">-</span>
+                                            </td>
+
+                                        }
+                                        else
+                                        {
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">@item.ReplyDate?.ToString("dd/MM/yyyy")</span>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+                <!--End of Personel Corporate Requests-->
+            </div>
+        </div>
+    </div>
+
+    <partial name="~/Areas/Manager/Views/Partial/Footer.cshtml" />
+</div>
+
+<div class="d-flex justify-content-center " style="margin-top:85px;">
+    
+        <div class='panel' id='js-panel' style="position:absolute; width:500px; z-index: 10000;">
+            <partial name="~/Areas/Manager/Views/Partial/modalPage.cshtml" />
+        </div>
+   
+    
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+<script>
+    
+
+  // Variables
+  var panel     = document.getElementById("js-panel");
+  var btns      = document.querySelectorAll(".flap__btn");
+  var btnReplay = document.getElementById("js-replay");
+  var acHazel   = document.getElementById("acHazel");
+  var btnExit   = document.getElementById("exitModal");
+  // On load, init panel
+  var init = function(event) {
+    panel.classList.add("is--open");
+        acHazel.classList.add("modal");
+        acHazel.classList.add("fade");
+        var id = event.target.dataset.id;
+
+        // Okey düğmesine tıklandığında AJAX isteği gönderin
+        $('#approve-advance-btn').on('click', function () {
+            $.ajax({
+                url: '/Manager/Advances/ApproveAdvance',
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    hidePanel();
+                    window.location.reload();                   
+                }
+            });
+        });
+
+        // Reddet düğmesine tıklandığında AJAX isteği gönderin
+        $('#reject-advance-btn').on('click', function () {
+            $.ajax({
+                url: '/Manager/Advances/RejectAdvance',
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    hidePanel();
+                    window.location.reload();
+                }
+            });
+        });
+
+
+    btnExit.addEventListener("click",function() {
+        hidePanel();
+    });
+
+    function hidePanel() {
+      
+      panel.classList.remove("is--open");
+            acHazel.classList.remove("modal");
+            acHazel.classList.remove("fade");
+
+           
+    }
+    
+    // When replay button is clicked,
+    // reset the stage.
+    btnReplay.addEventListener("click", function() {
+      resetStage();
+    });
+  }
+  
+  // Hide the button and re-call init
+  function resetStage() {
+    btnReplay.classList.remove("is--active");
+       
+    init();
+  }
+  
+  // On load, call init function
+
+
+</script>

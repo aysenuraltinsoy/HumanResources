@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ListOfManagerVM>
+
+@{
+    ViewData["Title"] = "ListOfManager";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid py-4">
+   @* <div class="position-absolute col-12 d-flex justify-content-end mt-8 rounded-3 z-index-2" style="height:80px;"><div id="notification" class="alert alert-success rounded-3 col-3 text-dark mr-6" style="display:none;">@TempData["response"]</div></div>*@
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4 shadow-lg">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3 text-center ">List Of Manager</h6>
+                    </div>
+                </div>
+
+                <div class="card-body px-0 pb-2">
+                   <div class="table-scrollable-container" style="height: 500px; overflow-y: auto;">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Photo</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Full Name</th>
+                                  
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Is Active</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sector</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Department</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Company Name</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                            <td class="align-middle text-center text-sm rounded-5">
+                                                <img src="@item.ImagePath" class="rounded-circle shadow" height="60" width="60">
+                                                </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.Name @item.Surname</span>
+                                        </td>
+                                       
+                                        <td class="align-middle text-center text-wrap">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@item.PhoneNumber.ToString("+90 (###) ###-####")</span>
+                                        </td>
+                                        <td class="align-middle text-center text-wrap text-sm">
+                                            <span class="text-center text-secondary text-xs font-weight-bold"> @(item.IsActive ? "Active" : "Passive")</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">@Html.DisplayFor(modelItem => item.Sector) </span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                                @Html.DisplayFor(modelItem => item.Department)
+                                            </span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-center text-secondary text-xs font-weight-bold">
+                                                @Html.DisplayFor(modelItem => item.Company.CompanyName)
+                                            </span>
+                                        </td>
+                                       
+                                      
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <partial name="~/Areas/Admin/Views/Partial/Footer.cshtml" />
+
+</div>

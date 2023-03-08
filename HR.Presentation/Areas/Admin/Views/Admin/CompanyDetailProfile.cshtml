@@ -1,0 +1,137 @@
+﻿@model DetailCompanyVM
+
+<div class="container-fluid py-4">
+	<div class="row">
+		<div class="col-12">
+			<div class="card my-4">
+				<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-gradient-dark">
+					<div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+						<h6 class="text-white text-capitalize ps-3 text-center ">Detail Company</h6>
+					</div>
+				</div>
+				<div class="card-body px-0 pb-2">
+					<div class="table-responsive p-0">
+
+						<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+						<div class="container">
+							<div class="row flex-lg-nowrap ">
+
+								<div class="col">
+									<div class="row">
+										<div class="col mb-3">
+											<div class="card d-flex justify-content-center" style="color:aliceblue;">
+												<div class="card-body">
+													<div class="e-profile">
+														<div class="row text-center">
+															<div class="col-12 col-sm-auto mb-3">
+																<div class="mx-auto" style="width: 140px;">
+																	<div>
+																		<img class="d-flex justify-content-center align-items-center rounded " src="@Model.Logo" style="height: 140px; width: 140px;" />
+
+																	</div>
+																</div>
+															</div>
+															<div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+																<div class="text-center text-sm-left mb-2 mb-sm-0">
+																	<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.CompanyName.ToUpper() @Model.CompanyTitle.ToString().ToUpper()</h4>
+																</div>
+
+															</div>
+														</div>
+														<ul class="nav nav-tabs">
+															<li class="nav-item"><a href="" class="active nav-link">Detail Information</a></li>
+														</ul>
+														<div class="tab-content pt-3">
+															<div class="tab-pane active">
+																<div novalidate="">
+																	<div class="row">
+																		<div class="col">
+																			<div class="row">
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Mersis No : </strong></label>
+																						<label value="identityNumber"> @Model.MersisNo</label>
+																					</div>
+																				</div>
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Email : </strong></label>
+																						<label value="email">@Model.EmailAddress</label>
+																					</div>
+																				</div>
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Tax No : </strong></label>
+																						<label value="birthDate"> @Model.TaxNo</label>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Tax Administration : </strong></label>
+																						<label value=""> @Model.TaxAdministration.ToUpper()</label>
+																					</div>
+																				</div>
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Company Phone : </strong></label>
+																						<label value="birthPlace"> @Model.CompanyPhone</label>
+																					</div>
+																				</div>
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Company Founded : </strong></label>
+																						<label> @Model.CompanyFounded</label>
+																					</div>
+																				</div>
+
+																			</div>
+																			<div class="row">
+
+																				
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Number Of Employees : </strong></label>
+																						<label> @Model.NumberOfEmployees</label>
+																					</div>
+																				</div>
+																				
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Deal Start Date : </strong></label>
+																						<label> @Model.DealStartDate</label>
+																					</div>
+																				</div>
+																				<div class="col">
+																					<div class="form-group">
+																						<label><strong>Deal End Date : </strong></label>
+																						<label> @Model.DealEndDate</label>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														</>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<partial name="~/Areas/Personnel/Views/Partial/Footer.cshtml" />
+		</div>
+	</div>
+</div>
+

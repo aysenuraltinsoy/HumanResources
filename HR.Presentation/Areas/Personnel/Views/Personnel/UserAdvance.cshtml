@@ -1,0 +1,72 @@
+﻿@using HR.Application.Extensions;
+@using HR.Domain.Enum;
+@model RequestAdvanceDTO
+@{
+    ViewData["Title"] = "UserAdvance";
+}
+
+
+
+<h1 class="text-center">User Advance Payment Form</h1>
+
+<div class="card " style="margin:20px; padding:20px">
+	<div class=" col-12 row d-flex justify-content-between">
+		
+		<form class=" mx-3 col-4"  asp-action="UserAdvance" asp-controller="Personnel" id="form" onload="showMessage()">
+			
+			<div class="form-group mt-3">
+				<strong class="text-dark">
+					Advance Type :
+				</strong>
+				<select class="form-select border" asp-for="AdvanceType" id="selectBox" asp-items="@Enum.GetValues(typeof(AdvanceType)).Cast<AdvanceType>().Select(d => new SelectListItem { Text = d.GetDisplayName(), Value = ((int)d).ToString() })"></select>
+				
+				<span asp-validation-for="ApprovalStatus" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3 ">
+
+				<strong class="text-dark">
+					Amount:
+				</strong>
+				<input class="form-control border" asp-for="Amount" type="number" placeholder="Please enter Amount">
+				<span asp-validation-for="Amount" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3" id="hiddenDiv" style="display:none;">
+				<strong class="text-dark">
+					Currency :
+				</strong>
+				<select class="form-select border" asp-for="Currency"  asp-items="@Enum.GetValues(typeof(Currency)).Cast<Currency>().Select(d => new SelectListItem { Text = d.ToString(), Value = ((int)d).ToString() })"></select>
+
+				<span asp-validation-for="ApprovalStatus" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3">
+				<strong class="text-dark">
+					Description:
+				</strong>
+				<input class="form-control border" asp-for="Description" type="text" placeholder="Please enter Description">
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</div>
+			
+			<input type="submit" id="myButton" class="btn btn-primary mt-3"  value="Create Request" />
+			
+			
+		</form>
+		<ul class="m-3 col-6 " >
+			<li>You can make your advance requests on this screen.</li>
+			<li>The maximum advance amount you can receive within 1 year is limited to 30% of your annual fee.</li>
+			<li>The maximum advance amount you can request is limited to 30% of your annual fee.</li>
+			<li>The minimum advance amount you can request is limited to 50% of your monthly fee.</li>
+			<li>Explanation part is mandatory, Amount part must be integer.</li>
+			<li>If you have a right to a lower amount than the minimum amount you can claim, you can request it.</li>
+		</ul>
+		
+	</div>
+	
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+		integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+		crossorigin="anonymous"></script>
+
+
+
+
+

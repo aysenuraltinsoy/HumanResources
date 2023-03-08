@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HumanResources.Application", "HumanResources.Application", "{A51261A4-DEA9-4724-941E-5D0BA0CA7FCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HumanResources.Infrastructure", "HumanResources.Infrastructure", "{B195A6FE-77D0-4E84-83F4-75A78A930E97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HumanResources.Domain", "HumanResources.Domain", "{6488E3D8-4D84-4B05-AD47-9B9AA5B93D3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HumanResources.Presentation", "HumanResources.Presentation", "{D5BE705F-C60F-45DC-AF8E-4CFC73AF1A60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Application", "HR.Application\HR.Application.csproj", "{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Domain", "HR.Domain\HR.Domain.csproj", "{B649DD12-3B06-44AC-AADD-15B0B95FDE98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Infrastructure", "HR.Infrastructure\HR.Infrastructure.csproj", "{41118514-4DB3-4630-9AE3-A598C00865EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Presentation", "HR.Presentation\HR.Presentation.csproj", "{07A99391-60FF-4DCC-A0A5-BA7B691EFB30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B649DD12-3B06-44AC-AADD-15B0B95FDE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B649DD12-3B06-44AC-AADD-15B0B95FDE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B649DD12-3B06-44AC-AADD-15B0B95FDE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B649DD12-3B06-44AC-AADD-15B0B95FDE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41118514-4DB3-4630-9AE3-A598C00865EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41118514-4DB3-4630-9AE3-A598C00865EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41118514-4DB3-4630-9AE3-A598C00865EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41118514-4DB3-4630-9AE3-A598C00865EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A99391-60FF-4DCC-A0A5-BA7B691EFB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A99391-60FF-4DCC-A0A5-BA7B691EFB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A99391-60FF-4DCC-A0A5-BA7B691EFB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A99391-60FF-4DCC-A0A5-BA7B691EFB30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71B501A8-C8C6-45CB-9127-F7ABC9E64CF4} = {A51261A4-DEA9-4724-941E-5D0BA0CA7FCF}
+		{B649DD12-3B06-44AC-AADD-15B0B95FDE98} = {6488E3D8-4D84-4B05-AD47-9B9AA5B93D3B}
+		{41118514-4DB3-4630-9AE3-A598C00865EA} = {B195A6FE-77D0-4E84-83F4-75A78A930E97}
+		{07A99391-60FF-4DCC-A0A5-BA7B691EFB30} = {D5BE705F-C60F-45DC-AF8E-4CFC73AF1A60}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {571E5E4F-8490-42AD-B937-A1F09502EF8B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/fatihbag7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HR.Application\\HR.Application.csproj
+		SccProjectTopLevelParentUniqueName1 = HumanResources.sln
+		SccProjectName1 = HR.Application
+		SccLocalPath1 = HR.Application
+		SccProjectUniqueName2 = HR.Domain\\HR.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = HumanResources.sln
+		SccProjectName2 = HR.Domain
+		SccLocalPath2 = HR.Domain
+		SccProjectUniqueName3 = HR.Infrastructure\\HR.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName3 = HumanResources.sln
+		SccProjectName3 = HR.Infrastructure
+		SccLocalPath3 = HR.Infrastructure
+		SccProjectUniqueName4 = HR.Presentation\\HR.Presentation.csproj
+		SccProjectTopLevelParentUniqueName4 = HumanResources.sln
+		SccProjectName4 = HR.Presentation
+		SccLocalPath4 = HR.Presentation
+	EndGlobalSection
+EndGlobal

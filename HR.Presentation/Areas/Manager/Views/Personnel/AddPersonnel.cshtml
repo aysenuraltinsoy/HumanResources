@@ -1,0 +1,255 @@
+﻿@using HR.Domain.Enum;
+@using HR.Application.Models;
+@model AddPersonnelDTO
+@{
+	ViewData["Title"] = "AddPersonnel";
+	Layout = "~/Areas/Manager/Views/Shared/_ManagerLayout.cshtml";
+}
+
+
+
+<div class="row d-flex justify-content-center align-items-start">
+	<div class="col-sm-12 col-lg-9 col-md-11 ">
+		<div class="row">
+			<div class="col mb-3">
+				<div class="card">
+
+					<form enctype="multipart/form-data" id="form" asp-area="Manager" asp-controller="Personnel" asp-action="AddPersonnel">
+						<div class="card-body">
+							<div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+								<h6 class="text-white text-capitalize ps-3 text-center ">Add Personnel</h6>
+							</div>
+							<br />
+							<div class="e-profile">
+
+
+
+								<div class="d-flex justify-content-center">
+									<div class="row gx-4 mb-2 d-flex justify-content-evenly">
+										<div class="col">
+
+											<div>
+												<!-- Uploaded image area-->
+												<img class="d-flex justify-content-center align-items-center rounded " style="height: 140px; width: 140px;" id="imageResult" />
+												<span asp-validation-for="UploadPath" class="text-danger"></span>
+											</div>
+										</div>
+										<div class="col d-flex flex-column justify-content-end mb-1">
+
+											<div class="d-flex justify-content-center">
+												<!-- Upload image input-->
+												<div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm col-lg-2">
+													<input id="upload" type="file" onchange="readURL(this);" class="form-control border-0" asp-for="UploadPath">
+													<label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+													<div class="input-group-append">
+														<label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								<ul class="nav nav-tabs">
+									<li class="nav-item "><h3>Create Personnel</h3></li>
+								</ul>
+
+								<div class="tab-content pt-3">
+									<div class="tab-pane active">
+										<div class="form" novalidate="">
+											<div class="row">
+												<div class="col">
+													<div class="row d-inline-flex">
+
+														<div class="col-lg-6 col-12">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Name :
+																</strong>
+																<input class="form-control border" asp-for="Name" type="text" placeholder="Name">
+																<span asp-validation-for="Name" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-lg-6 col-12">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Second Name :
+																</strong>
+																<input class="form-control border" asp-for="SecondName" type="text" placeholder="Second Name">
+																<span asp-validation-for="SecondName" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-lg-6 col-12">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Surname :
+																</strong>
+																<input class="form-control border" asp-for="Surname" type="text" placeholder="Surname">
+																<span asp-validation-for="Surname" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-lg-6 col-12">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Second Surname :
+																</strong>
+																<input class="form-control border" asp-for="SecondSurname" type="text" placeholder="Second Surname">
+																<span asp-validation-for="SecondSurname" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-12 col-lg-6 ">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Identity Number :
+																</strong>
+																<input class="form-control border" asp-for="IdentityNumber" type="number" placeholder=" Identity Number">
+																<span asp-validation-for="IdentityNumber" class="text-danger"></span>
+															</div>
+														</div>
+													
+														<div class="col-12 col-lg-6 ">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Sector :
+																</strong>
+																<select class="form-select border" asp-for="Sector" asp-items="@Enum.GetValues(typeof(Sector)).Cast<Sector>().Select(d => new SelectListItem { Text = d.ToString(), Value = ((int)d).ToString() })">
+																	<option selected>Open this select menu</option>
+																</select>
+																<span asp-validation-for="Sector" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-12 col-lg-6 ">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Department :
+																</strong>
+																<select class="form-select border" asp-for="Department" asp-items="@Enum.GetValues(typeof(Department)).Cast<Department>().Select(d => new SelectListItem { Text = d.ToString(), Value = ((int)d).ToString() })">
+																	<option selected>Open this select menu</option>
+																</select>
+																<span asp-validation-for="Department" class="text-danger"></span>
+															</div>
+														</div>
+
+
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Salary :
+																</strong>
+																<input class="form-control border" asp-for="Salary" type="number" placeholder="Salary">
+																<span asp-validation-for="Salary" class="text-danger" value=""></span>
+															</div>
+														</div>
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Password :
+																</strong>
+																<input class="form-control border" asp-for="Password" type="password" placeholder="Password">
+																<span asp-validation-for="Password" class="text-danger" value=""></span>
+															</div>
+														</div>
+
+
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Place Of Birth :
+																</strong>
+																<input class="form-control border" asp-for="PlaceOfBirth" type="text" placeholder="Place Of Birth">
+																<span asp-validation-for="PlaceOfBirth" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Phone Number :
+																</strong>
+																<input class="form-control border" rows="1" type="tel" id="phoneNumberInput" oninput="formatPhoneNumber(this);"><input class="form-control border phoneInputHidden" rows="1" type="hidden" id="phoneInputHidden" asp-for="PhoneNumber" oninput="formatPhoneNumber(this);">
+																<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+															</div>
+														</div>
+
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Birth Date :
+																</strong>
+																<input class="form-control border" asp-for="BirthDate" type="date" placeholder="Birth Date">
+																<span asp-validation-for="BirthDate" class="text-danger"></span>
+															</div>
+														</div>
+
+														<div class="col-12 col-lg-6">
+															<div class="form-group">
+																<strong class="text-dark">
+																	Starting Date :
+																</strong>
+																<input class="form-control border" asp-for="StartingDate" type="date" placeholder="Starting Date">
+																<span asp-validation-for="StartingDate" class="text-danger"></span>
+															</div>
+														</div>
+
+
+														
+															<div class="form-group">
+																<strong class="text-dark">
+																	Address :
+																</strong>
+																<input class="form-control border" asp-for="Address" type="text" placeholder="Address">
+																<span asp-validation-for="Address" class="text-danger"></span>
+															</div>
+														
+
+														@*      <div class="col-12 col-lg-6">
+														<div class="form-group">
+														<strong class="text-dark">
+														Ending Date :
+														</strong>
+														<input class="form-control border" asp-for="EndingDate" type="date" placeholder=" Ending Date">
+														<span asp-validation-for="EndingDate" class="text-danger"></span>
+														</div>
+														</div>
+														*@
+													</div>
+
+													<div class="row">
+														<div class="col d-flex justify-content-center">
+															<input class="btn btn-success mt-2" type="submit" id="Submit" value="Save Changes">
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+</div>
+

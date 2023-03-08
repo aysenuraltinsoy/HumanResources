@@ -1,0 +1,89 @@
+﻿@model UserVM
+<div class="container-fluid px-2 px-md-4">
+    <div class="page-header min-height-300 border-radius-xl mt-2" style="background-image: url('https://www.onbeskku.edu.tr/images/hakkimizda/insan-kaynaklari.jpg');">
+    </div>
+    <div class="card card-body mx-3 mx-md-4 mt-n8">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3 text-center ">Profile Page</h6>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-start col-12">
+
+
+
+            <div class="row gx-4 mb-2  mt-3 d-flex justify-content-center col-md-4">
+                <div class="col-lg-6">
+
+                    <div class="position-relative">
+                        <img class="d-flex justify-content-center align-items-center rounded-4 w-300 border-radius-lg shadow-sm" src="@Model.ImagePath" style="height: 200px; width: 200px;">
+                    </div>
+
+                   
+                </div>
+
+            </div>
+            <div class="d-flex flex-column align-items-center">
+            <div class="mt-3 ms-3">
+                <div class="h-100 ">
+                    <h5 class="mb-auto ms-7 text-3xl">
+                        Welcome @Model.Name @Model.SecondName
+                    </h5>
+
+                </div>
+            </div>
+            
+           @* <div class="mx-auto d-flex justify-content-center align-items-center">
+                <img src="@Model." class="col-lg-4 col-md-8 row-cols-lg-3 row-cols-3 col-sm-11 " />
+            </div>*@
+                <p class="ms-7  mt-5 font-weight-normal text-ml col-1 ">
+                    <a asp-area="Manager" asp-controller="Managers" asp-action="ManagerUpdateProfile">
+                    <i class="fas fa-user-edit text-secondary" style="font-size: 2em;" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+                </a>
+            </p>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-xl-10 mx-auto d-fl">
+                <div class="card card-plain h-100">
+                    <div class="card-body p-3">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0 ps-0  text-sm">
+                                        <strong class="text-dark">Full Name:</strong> @Model.Name @Model.SecondName @Model.Surname @Model.SecondSurname
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Sector:</strong> @Model.Sector.GetDisplayName()
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Email:</strong> @Model.Email
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Mobile:</strong> @String.Format("+90 {0:(###) ###-####}", @Model.PhoneNumber)
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Department:</strong> @Model.Department.GetDisplayName()
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Address:</strong> @Model.Address
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <partial name="~/Areas/Manager/Views/Partial/Footer.cshtml" />
+</div>
+

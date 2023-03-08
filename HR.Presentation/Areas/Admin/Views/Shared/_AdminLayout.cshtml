@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+
+<partial name="~/Areas/Admin/Views/Partial/Heading.cshtml" />
+<!--Head-->
+
+
+
+<body class="g-sidenav-show  bg-gray-200">
+    
+    <!--asidenavbar-->
+    <partial name="~/Areas/Admin/Views/Partial/Aside.cshtml" />
+   
+    <!--asidenavbar-->
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <partial name="~/Areas/Admin/Views/Partial/Navbar.cshtml" />
+        <!-- Navbar -->
+        <!-- Table -->
+       @RenderBody()
+        <!-- Table -->
+
+    </main>
+   
+    <!-- fixedplugin -->
+    <partial name="~/Areas/Admin/Views/Partial/FixedPlugIn.cshtml" />
+
+    <!-- fixedplugin -->
+  
+    <!--   Core JS Files   -->
+    <partial name="~/Areas/Admin/Views/Partial/Script.cshtml" />
+    
+    
+</body>
+
+
+</html>

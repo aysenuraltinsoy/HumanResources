@@ -1,0 +1,134 @@
+﻿    @model UpdateProfileDTO
+
+@{
+    ViewData["Update"] = "Güncelle";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<form enctype="multipart/form-data" id="form" asp-action="EditPersonnel">
+    <div class="container ">
+        <div class="row flex-lg-nowrap">
+            <input asp-for="Id" type="hidden" />
+            <input asp-for="Name" type="hidden" />
+            <input asp-for="SecondName" type="hidden" />
+            <input asp-for="Surname" type="hidden" />
+            <input asp-for="SecondSurname" type="hidden" />
+            <input asp-for="Department" type="hidden" />
+            <input asp-for="ImagePath" type="hidden" />
+      
+            <div class=" ">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-12 col-lg-10 col-md-12">
+                        <div class="card">
+                            
+                            <div class="card-body">
+                                <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3 text-center ">Update Personnel Profile</h6>
+                                </div>
+                                <br />
+                                <div class="e-profile card px-3">
+                                   
+                                    <div class="container">
+
+
+                                        <div class="row gx-4 mb-2 d-inline-flex ">
+                                             <div class="col-6 col-md-6">
+                                             
+
+                                                 <div class="d-flex justify-content-center align-items-centerw-300 mx-3 mb-3">
+                                                    <img class="rounded-3" id="imageResult" src="@Model.ImagePath" width="140" height="140" />
+                                                    <span asp-validation-for="UploadPath" class="text-danger"></span>
+                                                 </div>
+                                                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm col-lg-2 col-md-4">
+                                                    <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0" asp-for="UploadPath">
+                                                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                                                    <div class="input-group-append">
+                                                        <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                                                    </div>
+                                                </div>
+                                                 
+                                         
+                                               
+
+
+                                             </div>
+                                            <div class="col-6 d-flex flex-column justify-content-start align-items-center">
+                                                <div class="text-center mb-2">
+                                                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Name @Model.SecondSurname @Model.Surname @Model.SecondSurname</h4>
+                                                    <p class="mb-0">@Model.Department</p>
+                                                </div>
+                                                
+                                            </div>
+                                         
+
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="nav nav-tabs">
+                                        <li> <h3>Edit Profile</h3></li>
+                                    </ul>
+                                    
+                                    
+                                    <div class="tab-content pt-3">
+                                        <div class="tab-pane active">
+                                            <div class="form" novalidate="">
+
+
+    
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <strong class="text-dark">
+                                                                        Phone :</strong>
+                                                                    
+                                                                    <input class="form-control border " rows="1" type="tel" id="PhoneNumber" placeholder="Phone" value="@Model.PhoneNumber" oninput="formatPhoneNumber(this);">
+                                                                    <input class="form-control border phoneInputHidden" rows="1" type="hidden" id="phoneInputHidden" asp-for="PhoneNumber" oninput="formatPhoneNumber(this);">
+                                                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <div class="form-group">
+                                                                    <strong class="text-dark">
+                                                                        Adress :
+                                                                    </strong>
+                                                                    <textarea class="form-control border" rows="5" placeholder="My adress" id="Address" asp-for="Address">@Model.Address</textarea>
+                                                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-center">
+                                                        <input class="btn btn-success " type="submit" id="Submit" value="Save Changes">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+

@@ -1,0 +1,117 @@
+﻿@using HR.Domain.Enum;
+@model UpdateCompanyDTO
+
+@{
+    ViewData["Update"] = "Güncelle";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row d-flex justify-content-center align-items-start">
+    <div class="col-sm-12 col-lg-9 col-md-11 ">
+        <div class="row">
+            <div class="col mb-3" >
+                <div class="card">
+
+                    <form enctype="multipart/form-data" id="form" asp-action="UpdateInfoCompany">
+                        <div class="card-body">
+                            <div class="bg-gradient-info shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3 text-center ">Update Info Company</h6>
+                            </div>
+                            <br />
+                            <div class="e-profile">
+                                <div class="d-flex justify-content-center">
+                                    <div class="row gx-4 mb-2">
+                                        <div class="col">
+                                            <br />
+                                            <div class="d-flex justify-content-center align-items-center rounded-circle  w-300 border-radius-lg shadow-sm" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                <img id="LogoImage" width="140" height="140" />
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col d-flex flex-column justify-content-end mb-1">
+
+                                            <div class="d-flex justify-content-center">
+                                                <input class="fa fa-fw fa-camera" id="UploadPath" type="file" asp-for="LogoFile">
+                                                <span asp-validation-for="LogoFile" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item "><a href="#" class="active nav-link">Create Company</a></li>
+                                </ul>
+
+                                <div class="tab-content pt-3">
+                                    <div class="tab-pane active">
+                                        <div class="form" novalidate="">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row d-inline-flex">
+
+                                                        <div class="col-lg-6 col-12">
+                                                            <div class="form-group">
+                                                                <strong class="text-dark">
+                                                                    CompanyName :
+                                                                </strong>
+                                                                <input class="form-control border" asp-for="CompanyName" type="text" placeholder="CompanyName">
+                                                                <span asp-validation-for="CompanyName" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="form-group">
+                                                                <strong class="text-dark">
+                                                                    Email Address :
+                                                                </strong>
+                                                                <input class="form-control border" asp-for="EmailAddress" type="email" placeholder=" Email Address">
+                                                                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                      
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="form-group">
+                                                                <strong class="text-dark">
+                                                                    Company Title :
+                                                                </strong>
+                                                                <select asp-for="CompanyTitle" class="form-select border" aria-label="Default select example" asp-items="@Enum.GetValues(typeof(CompanyTitle)).Cast<CompanyTitle>().Select(d => new SelectListItem { Text = d.ToString(), Value =((int)d).ToString() })">
+                                                                    <option selected>Open this select menu</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col d-flex justify-content-center">
+                                                    <input class="btn btn-success " type="submit" id="Submit" value="Save Changes">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <input asp-for="AppCompanyID"  type="hidden"/>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+ 
+   
+</div>
+
+
+
+
+

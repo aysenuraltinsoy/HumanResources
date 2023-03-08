@@ -1,0 +1,309 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HR.Presentation
+build_property.RootNamespace = HR.Presentation
+build_property.ProjectDir = C:\Users\aalti\source\Workspaces\Workspace\Proje\Human Resources\Human Resource\Human Resources\src\HR.Presentation\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\aalti\source\Workspaces\Workspace\Proje\Human Resources\Human Resource\Human Resources\src\HR.Presentation
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/AddCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQWRkQ29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/AdminDetailProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQWRtaW5EZXRhaWxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/AdminProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQWRtaW5Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/AdminUpdateProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQWRtaW5VcGRhdGVQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/CompanyDetailProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQ29tcGFueURldGFpbFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/ListOfCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cTGlzdE9mQ29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Admin/UpdateInfoCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cVXBkYXRlSW5mb0NvbXBhbnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Manager/AddManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlclxBZGRNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Manager/ListOfManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlclxMaXN0T2ZNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/Aside.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxBc2lkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/FixedPlugIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxGaXhlZFBsdWdJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/Heading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxIZWFkaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxOYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Partial/Script.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFydGlhbFxTY3JpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Advances/ListOfAdvances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xBZHZhbmNlc1xMaXN0T2ZBZHZhbmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Managers/ManagerDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xNYW5hZ2Vyc1xNYW5hZ2VyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Managers/ManagerProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xNYW5hZ2Vyc1xNYW5hZ2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Managers/ManagerUpdateProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xNYW5hZ2Vyc1xNYW5hZ2VyVXBkYXRlUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/AsideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXEFzaWRlQmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/deneme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXGRlbmVtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/FixedPlugIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXEZpeGVkUGx1Z0luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Heading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXEhlYWRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/modalPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXG1vZGFsUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXE5hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Script.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXFNjcmlwdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Table.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXFRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Table_Side.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXFRhYmxlX1NpZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Partial/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQYXJ0aWFsXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Personnel/AddPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQZXJzb25uZWxcQWRkUGVyc29ubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Personnel/ListOfPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQZXJzb25uZWxcTGlzdE9mUGVyc29ubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Shared/_ManagerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX01hbmFnZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Manager/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/AsideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcQXNpZGVCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/deneme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcZGVuZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/FixedPlugIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcRml4ZWRQbHVnSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Heading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcSGVhZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcTmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Script.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Table.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Table_Side.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcVGFibGVfU2lkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Partial/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBhcnRpYWxcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Personnel/DetailPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBlcnNvbm5lbFxEZXRhaWxQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Personnel/EditPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBlcnNvbm5lbFxFZGl0UGVyc29ubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Personnel/ListOfAdvances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBlcnNvbm5lbFxMaXN0T2ZBZHZhbmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Personnel/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBlcnNvbm5lbFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Personnel/UserAdvance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFBlcnNvbm5lbFxVc2VyQWR2YW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Shared/_PersonnelLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfUGVyc29ubmVsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Areas/Personnel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Login/CodeSender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ29kZVNlbmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Login/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Login/TakeNewPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVGFrZU5ld1Bhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aalti/source/Workspaces/Workspace/Proje/Human Resources/Human Resource/Human Resources/src/HR.Presentation/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-39vapjvizf
