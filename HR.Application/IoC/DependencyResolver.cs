@@ -22,19 +22,12 @@ namespace HR.Application.IoC
 			builder.RegisterType<UserRepo>().As<IUserRepo>().InstancePerLifetimeScope();
             builder.RegisterType<UserAdvanceRepo>().As<IUserAdvanceRepo>().InstancePerLifetimeScope();
 
-
-
             //Services
             builder.RegisterType<MailService>().As<IMailService>().InstancePerLifetimeScope();
             builder.RegisterType<AdvanceService>().As<IAdvanceService>().InstancePerLifetimeScope();
             builder.RegisterType<AdminService>().As<IAdminService>().InstancePerLifetimeScope();
 			builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
 			builder.RegisterType<ManagerService>().As<IManagerService>().InstancePerLifetimeScope();
-
-
-
-
-
 
 			//AUTOMAPPER
 			builder.Register(context => new MapperConfiguration(cfg =>

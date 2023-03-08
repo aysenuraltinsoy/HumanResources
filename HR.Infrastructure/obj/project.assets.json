@@ -3009,7 +3009,7 @@
       "projectName": "HR.Infrastructure",
       "projectPath": "C:\\Users\\aalti\\source\\Workspaces\\Workspace\\Proje\\Human Resources\\Human Resource\\Human Resources\\src\\HR.Infrastructure\\HR.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\aalti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aalti\\source\\Workspaces\\Workspace\\Proje\\Human Resources\\Human Resource\\Human Resources\\src\\HR.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\aalti\\Source\\Workspaces\\Workspace\\Proje\\Human Resources\\Human Resource\\Human Resources\\src\\HR.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
