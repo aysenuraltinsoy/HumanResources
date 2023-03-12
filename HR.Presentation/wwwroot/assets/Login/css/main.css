@@ -174,7 +174,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.65);
+  background-color: rgb(238, 239, 192, 0,90);
 }
 
 .wrap-login100 {
@@ -216,7 +216,7 @@ iframe {
 .login100-form-title {
   font-family: Ubuntu-Bold;
   font-size: 28px;
-  color: #fff;
+  color: black;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
